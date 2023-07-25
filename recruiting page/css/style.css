@@ -59,6 +59,7 @@ p, pre {
 .paper {
     width: 60vw;
 }
+
 /* 
 #cavaler-wrapper {
     margin-left: -10px !important;
@@ -136,7 +137,7 @@ p {
 
 @media (min-width: 1460px) {
     #cavaler-wrapper {
-        display: block !important;
+        /* display: block !important; */
     }
     p {
         font-size: 13px !important;
@@ -182,7 +183,7 @@ p {
 
 #paper-wrapper-middle {
     width: 60vw !important;
-    margin-top: -17px !important;
+    /* margin-top: -17px !important; */
     /* padding-top: 70px; */
     margin-left: -4px;
     padding-left: 4px;

@@ -10,20 +10,27 @@
     </head>
 
     <body style="background-color: #1C1B26;">
-        <div id="wrapper" class="position-relative" style="width: 100vw; height: 100vh; overflow: hidden;">
-            <video id="opening" class="start-50 top-50 position-absolute translate-middle video" autoplay>
+
+        <div id="wrapper">
+
+            <!-- <video id="opening" autoplay muted class="start-50 top-50 position-absolute translate-middle video">
                 <source src="res/opening-scene.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
-            
-            <div style="opacity: 0;" id="paperDiv" class="position-absolute start-50 d-flex flex-column translate-middle-x">
+            </video> -->
+            <!-- class="position-absolute start-50 d-flex flex-column translate-middle-x" -->
+            <div id="paperDiv" class="paper">
                 <div class="first-part mt-5">
-                    <img src="res/first-section.png" class="paper">
-                    <div id="paper-wrapper-upper" class="d-flex justify-content-around">
+                    <img src="res/first-section.png" class="paper-img">
+
+                    <div>
+                        Hi it's me
+                    </div>
+
+                    <div id="paper-wrapper-upper">
                         <div class="col-2 p-0 m-0">
                             <img id="cavaler" src="res/cavaler.png" class="m-0 p-0">
                         </div>
-                        <div class="col-8 ms-5">
+                        <div class="text-container-upper">
                             <p class="text-center h4 text-white fw-bold">
                                 For those reading this letter, 
                             </p>
@@ -50,6 +57,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div id="paper-wrapper-middle" class="d-flex flex-column align-items-center">
                     <p class="text-center text-white fw-bold h5">
                         Here's what you can expect from us:
@@ -132,21 +141,21 @@
                 <img src="res/end-section.png" class="end-section">
             </div>
             
-            <div style="opacity: 0;" id="closing" class="position-absolute top-50 start-50 translate-middle">
+            <!-- <div style="opacity: 0;" id="closing" class="position-absolute top-50 start-50 translate-middle">
                 <video id="closingAnimation" class="video" autoplay>
                     <source src="res/closing-scene.mp4" type="video/mp4" id="changeSrc">
                     Your browser does not support the video tag.
                 </video>
-            </div>
+            </div> -->
             
-            <div style="opacity: 0;" id="envelope" class="position-absolute top-50 start-50 translate-middle">
+            <!-- <div style="opacity: 0;" id="envelope" class="position-absolute top-50 start-50 translate-middle">
                 <img src="res/envelope.gif" class="envelopePic">
                 <p style="color: white;" class="text">Are you sure?</p>
                 <div class="justify-content-center d-flex">
                     <button type="button" id="btnPrev" class="me-5 btn btn-outline-danger disabled text" onclick="middleSection()">No</button>
                     <button type="button" id="btnNext" class="btn btn-outline-success disabled text" onclick="verificationSection()">Yes</button>
                 </div>
-            </div>
+            </div> -->
             
         </div>
 

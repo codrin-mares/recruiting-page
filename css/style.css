@@ -57,6 +57,12 @@ p, pre {
 }
 
 .paper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.paper-img {
     width: 60vw;
 }
 /* 
@@ -93,13 +99,22 @@ p, pre {
 }
 
 #paper-wrapper-upper {
-    width: 60vw !important;
-    margin-top: -350px;
+    /* width: 60vw !important; */
+    /* margin-top: -350px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.text-container-upper {
+    margin-top: 4.8rem; 
+    width: 80%;
 }
 
 #paper-wrapper-middle {
     width: 60vw !important;
-    margin-top: -140px;
+    /* margin-top: -140px; */
     padding-top: 70px;
     margin-left: -4px;
     padding-left: 4px;

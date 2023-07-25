@@ -12,8 +12,10 @@ const btnNext = document.getElementById('btnNext');
 
 var isReplayDisplayed = true;
 
-opening.addEventListener('ended',middleSection,false);
-closingAnimation.addEventListener('ended',showRepeat,false);
+opening?.addEventListener('ended',middleSection,false);
+closingAnimation?.addEventListener('ended',showRepeat,false);
+
+middleSection();
 
 window.onresize = resize();
 
@@ -56,7 +58,11 @@ function middleSection() {
     btnSubmit.classList.remove('disabled');
     btnPrev.classList.add('disabled');
     btnNext.classList.add('disabled');
-    opening.style.opacity = 0;
+
+    if (opening) {
+        opening.style.opacity = 0;
+    }
+    
     envelope.style.opacity = 0;
     paper.style.opacity = 1;
     wrapper.style.overflow = 'visible';
