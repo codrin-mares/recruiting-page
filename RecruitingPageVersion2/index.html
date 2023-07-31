@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -25,10 +24,10 @@
         </video>
     </div>
 
-    <div id="paper-wrapper" style="display: none;">
+    <div id="paper-wrapper" class="paper-wrapper-class">
 
         <div>
-            <img src="res/first-section margin.png" style="width: 100%;">
+            <img src="res/first-section margin.png" style="width: 100%; margin-bottom: -0.25rem;">
         </div>
 
         <div id="paper-header">
@@ -50,20 +49,22 @@
 
                     <div style="display: flex;
                     flex-direction: column;
-                    justify-content: space-between;">
+                    justify-content: space-evenly;
+                    margin-right: 1rem;
+                    ">
                         
-                        <p class="handwriting">
+                        <p class="handwriting p-margin">
                             Your journey has been hard and arduous, but rewarding. <br>
                             You have made it. <br>
                             Now new possibilities dawn upon your path.
                         </p>
-                        <p>
+                        <p class="p-margin">
                             Quest Fox Studio has also started the journey almost 1 year ago and we
                             continue to grow, that is why we are seeking new friends to team up with us. 
                             We develop game graphics be it 2D or 3D as well as other non-gaming related
                             cool stuff, such as animations for ESA (European Space Agency) among other things.
                         </p>
-                        <p>
+                        <p class="p-margin">
                             We are a studio based in the EU, Romania <br> 
                             and you can see more about us at <a href="https://questfoxstudio.com" target="_blank" id="link">www.questfoxstudio.com</a>
                         </p>
@@ -243,8 +244,8 @@
 
     <div id="envelope" class="envelope-container">
         <div class="envelope-wrapper">
-            <img src="res/envelope.gif" class="envelopePic">
-            <p style="margin: 1rem 0rem 1rem">Are you sure?</p>
+            <img src="res/SCRIBBLE OC.gif" class="envelopePic">
+            <p style="margin: 1rem 0rem 1rem">All done?</p>
             <div class="justify-content-center d-flex">
                 <button type="button" id="btnPrev" class="envelope-no-btn" onclick="hideEnvelope()">No</button>
                 <button type="button" id="btnNext" class="envelope-yes-btn" onclick="confirmSubmit()">Yes</button>
@@ -255,8 +256,18 @@
     <div id="closing-wrapper" class="video-wrapper" style="display: none;">
         <div style="position: relative;">
             <img id="replay-btn" src="res/replay.gif" class="replay-gif">
-            <video id="closing" autoplay muted class="video">
+            <video id="closing" class="video">
                 <source src="res/closing-scene.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="replay-scene-wrapper" class="video-wrapper" style="display: none;">
+        <div style="position: relative;">
+            <img id="replay-btn2" src="res/replay.gif" class="replay-gif">
+            <video id="replay-scene" class="video">
+                <source src="res/Merged1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>

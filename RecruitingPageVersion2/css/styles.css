@@ -3,29 +3,6 @@
   padding: 0;
 }
 
-html {
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
-    font-size: 10px !important;
-  }
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    font-size: 12px !important;
-  }
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    font-size: 14px !important;
-  }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    font-size: 16px !important;
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    font-size: 18px !important;
-  }
-}
-
 body {
   font-family: Merriweather, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   background-color: #1C1B26 !important;
@@ -51,10 +28,6 @@ a:active {
   text-decoration: none;
 }
 
-/* p, pre {
-  font-family: Merriweather, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
-} */
-
 #name {
   color: orange;
 }
@@ -64,7 +37,8 @@ a:active {
 }
 
 .video-wrapper {
-  width: 100%;
+  margin-left: 25%;
+  width: 50%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -84,9 +58,22 @@ a:active {
   width: 40%;
 }
 
-#paper-wrapper {
-  /* width: 100vw; */
+.paper-wrapper-class {
+  display: block;
   padding: 2vw 10vw;
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  height: 0px;
+}
+
+.fade-in-transition {
+  transition: opacity 2s ease-out;
+  -webkit-transition: opacity 2s ease-out;  
+  -moz-transition: opacity 2s ease-in-out;
+  opacity: 1;
+  position: initial;
+  height: auto;
 }
 
 #paper-header {
@@ -108,12 +95,6 @@ a:active {
 
 #header-content-img {
   height: 100%;
-}
-
-.logo-img {
-  @media only screen and (min-width: 600px) {
-    height: 20rem;  
-  }
 }
 
 .header-content {
@@ -175,26 +156,27 @@ a:active {
 }
 
 .styled-input {
+  font-size: inherit;
   margin: 0.5rem 0rem 0.75rem;
   padding: 0.25rem 0.5rem;
   background-color: inherit;
   height: 5rem;
+}
 
-  
-  &:focus {
-    outline: none;
-  }
+.styled-input:focus {
+  outline: none;
 }
 
 .styled-outer-input {
+  font-size: inherit;
   margin: 0.5rem 0rem 0.75rem;
   background-color: rgb(232, 213, 178, 0.7);
   padding: 0.25rem 0.5rem;
   border: 1px solid gray;
-  
-  &:focus {
-    outline: none;
-  }
+}
+
+.styled-outer-input:focus {
+  outline: none;
 }
 
 .footer {
@@ -208,11 +190,11 @@ a:active {
   font-weight: bold;
   border: 1px solid gray;
   font-size: 1.25rem;
+}
 
-  &:hover {
-    cursor: pointer;
-    background-color: darkorange;
-  }
+.styled-submit-btn:hover {
+  cursor: pointer;
+  background-color: darkorange;
 }
 
 .subtitle {
@@ -275,10 +257,11 @@ a:active {
   border-radius: 0.5rem;
   font-size: 1.5rem;
 
-  &:hover {
-    cursor: pointer;
-    background-color: darkorange;
-  }
+}
+
+.envelope-yes-btn:hover {
+  cursor: pointer;
+  background-color: darkorange;
 }
 
 .envelope-no-btn {
@@ -288,11 +271,11 @@ a:active {
   border: 1px solid gray;
   border-radius: 0.5rem;
   font-size: 1.5rem;
+}
 
-  &:hover {
-    cursor: pointer;
-    background-color: darkred;
-  }
+.envelope-no-btn:hover {
+  cursor: pointer;
+  background-color: darkred;
 }
 
 .replay-gif {
@@ -303,4 +286,80 @@ a:active {
   height: 4rem;
   cursor: pointer;
   z-index: 2;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px !important;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;  
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 12px !important;
+  }
+
+  .video-wrapper {
+    margin-left: 12.5%;
+    width: 75%;
+  }
+
+  .logo-img {
+      height: 40vw;  
+  }
+
+  .header-container {
+    /* display: flex;
+    flex-direction: column; */
+  
+    flex-direction: row;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 14px !important; 
+  }
+
+  .video-wrapper {
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 18px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1500px and up) */
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 22px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1900px and up) */
+@media only screen and (min-width: 1900px) {
+  html {
+    font-size: 26px !important;
+  }
 }
