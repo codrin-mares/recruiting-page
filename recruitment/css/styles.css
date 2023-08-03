@@ -43,11 +43,13 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 .video {
   width: 100%;
   max-height: 100vh;
+  z-index: 200;
 }
 
 
@@ -65,6 +67,7 @@ a:active {
   position: fixed;
   top: 0px;
   height: 0px;
+  z-index: -1;
 }
 
 .fade-in-transition {
@@ -83,6 +86,7 @@ a:active {
   background-repeat: repeat-y;
   min-height: 22rem;
   background-size: 100%;
+  z-index: -1;
 }
 
 #paper-header-background {
@@ -302,6 +306,7 @@ a:active {
     justify-content: center;
     align-items: center;
     margin: 0;  
+    z-index: 100;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -313,16 +318,14 @@ a:active {
   .video-wrapper {
     margin-left: 12.5%;
     width: 75%;
+    z-index: 100;
   }
 
   .logo-img {
-      height: 40vw;  
+    height: 40vw;
   }
 
   .header-container {
-    /* display: flex;
-    flex-direction: column; */
-  
     flex-direction: row;
   }
 }
@@ -335,6 +338,7 @@ a:active {
   .video-wrapper {
     margin-left: 25%;
     width: 50%;
+    z-index: 100;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */

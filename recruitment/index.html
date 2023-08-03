@@ -16,7 +16,7 @@
 <body>
 
     <div id="opening-wrapper" class="video-wrapper">
-        <video id="opening" autoplay muted class="video">
+        <video id="opening" autoplay muted playsinline class="video">
             <source src="res/opening-scene.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -254,7 +254,7 @@
     <div id="closing-wrapper" class="video-wrapper" style="display: none;">
         <div style="position: relative;">
             <img id="replay-btn" src="res/replay.gif" class="replay-gif">
-            <video id="closing" class="video">
+            <video id="closing" muted playsinline class="video">
                 <source src="res/closing-scene.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -264,7 +264,7 @@
     <div id="replay-scene-wrapper" class="video-wrapper" style="display: none;">
         <div style="position: relative;">
             <img id="replay-btn2" src="res/replay.gif" class="replay-gif">
-            <video id="replay-scene" class="video">
+            <video id="replay-scene" muted playsinline class="video">
                 <source src="res/Merged1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
