@@ -1,9 +1,7 @@
 const questions = {
   q1: 'Q: How did your programming journey begin and what made you love it?',
-  q2: 'Q: Mention projects you personally worked on and what was your contribution to them (personal, contests, game jams, etc.).',
-  q3: 'Q: Tell us about problems you ran into when coding and how you managed to overcome them.',
-  q4: 'Q: What your hobbies are and activities you enjoy doing (can really be anything!)?',
-  q5: 'Q: What is your approach when designing and organizing your coding architecture? Could you also provide an example of a project where you used your preferred architectural principles or patterns?',
+  q2: 'Q: Describe projects you have been personally involved in and outline your contributions to them (contests, game jams, personal projects, etc.).',
+  q3: 'Q: What are your hobbies and activities that you really enjoy doing (can be anything!)?',
 };
 
 // Example POST method implementation:
@@ -44,10 +42,10 @@ function extractRefQP() {
 let formValues = undefined;
 
 function processFormProps(formProps) {
-  const { q1, q2, q3, q4, q5 } = formProps || {};
+  const { q1, q2, q3 } = formProps || {};
   const { name, email, socialMedia, message} = formProps || {};
 
-  const questionProps = { q1, q2, q3, q4, q5 };
+  const questionProps = { q1, q2, q3 };
 
   const detailString = `Name: ${name}\nEmail: ${email}\nSocial Media: ${socialMedia || 'N/A'}\nReference: ${extractRefQP() || 'Website'}\n`
 
